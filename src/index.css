@@ -1,13 +1,244 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+}
+body{
+    
+    background-image: url("/public/images/image6.jpg");
+   
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App{
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+ 
 }
+
+.player{
+
+ width: 400px;
+  /* display: block; */
+  /* background-image: 0 */
+  border: 1px solid ;
+  margin: 0px auto;
+  padding: 30px;
+  border-radius: 16px;
+  overflow:hidden;
+  /* box-shadow: inset-6px -6px 12px rgba(245, 243, 243, 0.8),
+  inset-6px -6px 12px rgba(250, 245, 245, 0.8); */
+   -webkit-box-shadow: 0px 0px 20px 2px #f5f7f8;
+  -moz-box-shadow: 0px 0px 20px 2px #fcfdfd;
+  -ms-box-shadow: 0px 0px 20px 2px #f6f7f8;
+  -o-box-shadow: 0px 0px 20px 2px #eff3f5;
+  box-shadow: 0px 0px 20px 2px #f4f5f7;
+}
+
+.player > h4 {
+  color: white;
+ font-size: 14px; 
+ text-transform: uppercase;
+ font-weight: 500;
+ text-align: center;
+ overflow: hidden;
+}
+
+.player > p{
+  color:#aaa;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 600;
+  overflow: hidden;
+}
+
+.player >p span {
+  font-weight: 400;
+  width: fit-content;
+  color : white;
+  
+}
+
+.details .details_img {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  overflow: hidden;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+}
+/* .details > .details_img img{
+ display: block;
+ margin: 50px auto;
+ object-fit: contain;
+ height: 150px;
+ width: 150px;
+ border-radius: 50%;
+ box-shadow: 12px 12px white;
+} */
+
+.details__img {
+
+  margin: 12px auto;
+  align-items: center;
+  position: relative;
+  height: 150px;
+  width: 140px;
+  border-radius: 50%;
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
+  0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+
+}
+
+.details .details_title {
+  
+  color:#eee;
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.details .details_Artist{
+
+  color:#eee;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+
+}
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  padding-top: 20px;
+ 
+}
+
+.control .control_Playbutton{
+  width: 62px;
+  display: flex;
+  margin:0 20px;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background : none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  overflow: hidden;
+  justify-content: center;
+}
+
+.control .control_Playbutton:hover{
+  width: 62px;
+  display: flex;
+  margin:0 20px;
+  padding: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  background : none;
+  color: rgb(209, 61, 184);
+  font-size: 24px;
+  cursor: pointer;
+  overflow: hidden;
+  justify-content: center;
+  border-color:  rgb(209, 61, 184);
+}
+
+.control .control_skipBtn{
+  display: flex;
+  margin:0 20px;
+  padding: 20px;
+  /* border: 2px solid white; */
+  border-radius: 50%;
+  outline: none;
+  background: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  overflow: hidden;
+  border: none;
+}
+
+audio::-webkit-media-controls-play-button {
+  display:none;
+  background: none;
+}
+
+
+/* .player_audionew{
+  display: flex;
+  
+} */
+
+.player_audionew .ranges{
+ width:100%;
+background-color: grey;
+/* height: 2px; */
+
+}
+
+.player_audionew .time{
+  display:flex;
+  color : white;
+  padding: 5px;
+  justify-content: space-between;
+ }
+
+
+.currentTime {
+  order: 1;
+}
+
+.duration {
+  order: 2;
+}
+
+ .player_audionew .ranges {
+  -webkit-appearance: none;
+  height: 2px;
+  background-color: white;
+  margin: 0;
+  width: 100%;
+  padding:0px;
+}
+
+.player_audionew .ranges::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.ranges::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.ranges::-ms-thumb {
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+ 
